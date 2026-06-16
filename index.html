@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reisplanner</title>
+    <title>DeReisGids</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background"></div>
 
-    <main class="hero">
-        <div class="card">
-            <span class="tag">✈️ Reisbestemmingen</span>
+    <header class="topbar">
+        <button id="menuBtn" class="menu-btn">☰</button>
+        <h1>DeReisGids</h1>
+    </header>
 
-            <h1>Ontdek het Noorden</h1>
-
-            <p>
-                Kies een bestemming en begin je avontuur.
-                Voor nu is Lapland beschikbaar.
-            </p>
-
-            <nav class="menu">
-                <a href="./lapland" class="destination-card">
-                    <div class="icon">❄️</div>
-
-                    <div class="content">
-                        <h2>Lapland</h2>
-                        <p>Sneeuw, noorderlicht en onvergetelijke avonturen.</p>
-                    </div>
-
-                    <div class="arrow">→</div>
-                </a>
-            </nav>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <h2>Bestemmingen</h2>
         </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="./lapland">
+                        <span>❄️</span>
+                        <span>Lapland</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+
+    <main class="content">
+        <h2>Welkom bij DeReisGids</h2>
+        <p>Kies een bestemming via het menu linksboven.</p>
     </main>
 
     <script src="script.js"></script>
