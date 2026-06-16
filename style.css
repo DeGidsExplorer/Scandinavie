@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,33 +7,110 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    color: white;
+}
+
+.background {
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.55)),
+        url("https://images.unsplash.com/photo-1515238152791-8216bfdf89a7?auto=format&fit=crop&w=2000&q=80");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.05);
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
     padding: 2rem;
 }
 
-header {
-    margin-bottom: 2rem;
+.card {
+    width: min(700px, 100%);
+    padding: 3rem;
+    border-radius: 32px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,.3);
+}
+
+.tag {
+    display: inline-block;
+    padding: .5rem 1rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.15);
+    font-size: .9rem;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    color: #333;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1rem;
 }
 
-.menu {
-    list-style: none;
+.card > p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,.85);
+    margin-bottom: 2rem;
 }
 
-.menu a {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: #0078d7;
-    color: white;
+.destination-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    transition: all .3s ease;
 }
 
-.menu a:hover {
-    background-color: #005ea6;
+.destination-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,.25);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+}
+
+.content {
+    flex: 1;
+}
+
+.content h2 {
+    margin-bottom: .25rem;
+}
+
+.content p {
+    color: rgba(255,255,255,.75);
+    font-size: .95rem;
+}
+
+.arrow {
+    font-size: 2rem;
+    transition: transform .3s ease;
+}
+
+.destination-card:hover .arrow {
+    transform: translateX(8px);
 }
