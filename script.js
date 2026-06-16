@@ -1,10 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const card = document.querySelector(".card");
+const menuBtn = document.getElementById("menuBtn");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
 
-    document.addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 10;
-        const y = (e.clientY / window.innerHeight - 0.5) * 10;
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    overlay.classList.toggle("show");
+});
 
-        card.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
-    });
+overlay.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
 });
