@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reis Menu</title>
+    <title>Reisplanner</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Bestemmingen</h1>
-    </header>
+    <div class="background"></div>
 
-    <nav>
-        <ul class="menu">
-            <li>
-                <a href="./lapland">Lapland</a>
-            </li>
-        </ul>
-    </nav>
+    <main class="hero">
+        <div class="card">
+            <span class="tag">✈️ Reisbestemmingen</span>
+
+            <h1>Ontdek het Noorden</h1>
+
+            <p>
+                Kies een bestemming en begin je avontuur.
+                Voor nu is Lapland beschikbaar.
+            </p>
+
+            <nav class="menu">
+                <a href="./lapland" class="destination-card">
+                    <div class="icon">❄️</div>
+
+                    <div class="content">
+                        <h2>Lapland</h2>
+                        <p>Sneeuw, noorderlicht en onvergetelijke avonturen.</p>
+                    </div>
+
+                    <div class="arrow">→</div>
+                </a>
+            </nav>
+        </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
